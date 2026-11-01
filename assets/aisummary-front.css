@@ -1,0 +1,23 @@
+.ai-summary {
+    margin: 0 0 1.75rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid rgba(var(--primary-color-rgba, 13, 110, 253));
+    border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
+    background: rgba(var(--primary-bg-rgba, 13, 110, 253, 0.18));
+    line-height: 1.8;
+    word-break: break-word;
+}
+
+.ai-summary-title {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    color: rgba(var(--primary-color-rgba, 13, 110, 253));
+}
+
+.ai-summary p {
+    margin: 0;
+}
+
+.ai-summary p + p {
+    margin-top: 0.5rem;
+}

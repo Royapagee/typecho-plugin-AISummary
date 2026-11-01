@@ -1,0 +1,57 @@
+.ai-summary-field .ai-summary-input {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.ai-summary-count {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.7;
+    vertical-align: middle;
+}
+
+.ai-summary-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.ai-summary-toolbar .btn {
+    margin: 0;
+}
+
+.ai-summary-status {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.8;
+    word-break: break-word;
+}
+
+.ai-summary-status.is-busy {
+    opacity: 0.9;
+}
+
+.ai-summary-status.is-success {
+    color: #2a8a46;
+    opacity: 1;
+}
+
+.ai-summary-status.is-error {
+    color: #c0392b;
+    opacity: 1;
+}
+
+.ai-summary-busy textarea {
+    opacity: 0.75;
+}
+
+.ai-summary-hint {
+    margin: 8px 0 0;
+}
