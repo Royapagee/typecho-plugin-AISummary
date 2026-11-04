@@ -264,7 +264,6 @@ PROMPT;
             null,
             null,
             _t('AI 摘要'),
-            _t('保存在自定义字段 ai_summary 中，可在主题里通过 $this->fields->ai_summary 读取。')
         );
         $field->setInputsAttribute('class', 'text-s w-100 ai-summary-input');
         $field->setInputsAttribute('rows', '5');

@@ -506,7 +506,6 @@ final class Summary
 
         $target = imagecreatetruecolor($newWidth, $newHeight);
         if ($target === false) {
-            imagedestroy($source);
             return null;
         }
 
@@ -514,7 +513,9 @@ final class Summary
         $white = imagecolorallocate($target, 255, 255, 255);
         imagefill($target, 0, 0, $white);
         imagecopyresampled($target, $source, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
-        imagedestroy($source);
+
+        // GdImage 对象由引用计数回收，PHP 8.5 起无需也不应调用 imagedestroy()。
+        unset($source);
 
         $result = null;
         foreach ([82, 72, 62] as $quality) {
@@ -527,8 +528,6 @@ final class Summary
                 break;
             }
         }
-
-        imagedestroy($target);
 
         return $result;
     }
