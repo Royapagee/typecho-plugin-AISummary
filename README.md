@@ -2,6 +2,11 @@
 
 为 Typecho 文章提供 `ai_summary` 自定义字段，并在文章编辑页提供摘要编辑框和“生成摘要”按钮。生成时会把编辑器中的标题、正文以及正文引用的图片一起发送给 OpenAI 格式的聊天补全接口。
 
+| 演示地址：[森罗幻想](https://blog.roysgensokyo.space/technology/584.html) |
+| --- |
+| <img width="1208" height="564" alt="image" src="https://github.com/user-attachments/assets/ca330bfb-4f9e-4ddd-9df0-4efef940a25d" /> |
+
+
 ## 功能
 
 - 摘要保存在自定义字段 `ai_summary` 中，主题可通过 `$this->fields->ai_summary` 读取。
@@ -57,5 +62,4 @@
 - 图片压缩依赖 GD；超大图片（超过 1600 万像素）会被跳过。
 - 图片以 data URL 发送时请求体会明显变大，可通过“最多发送图片数”和“图片最长边”控制。
 - 生成结果由第三方模型返回，保存前请自行检查。
-- AIContentSummaryPlus 也使用 `ai_summary` 字段，两个插件不要同时启用；启用 AISummary 时会检测并拒绝。
 - 识别正文中的 Markdown 行内图片 `![alt](url)`、引用式图片 `![alt][id]` / `![alt][]` / `![alt]`，以及 HTML `<img src="...">`。
